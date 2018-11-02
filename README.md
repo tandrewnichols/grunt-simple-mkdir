@@ -24,8 +24,20 @@ Alternatively, install [task-master](http://github.com/tandrewnichols/task-maste
 
 ### Overview
 
-In your project's Gruntfile, add a section named `mkdir` to the data object passed into `grunt.initConfig()`.
+In your project's Gruntfile, add a section named `mkdir` to the data object passed into `grunt.initConfig()`, and, under args, specify the directories to create. You can also add `-p` to options if necessary.
 
+```js
+grunt.initConfig({
+  mkdir: {
+    dev: {
+      args: ['foo/bar/{baz,quux}', 'blah'],
+      options: {
+        p: true
+      }
+    }
+  }
+});
+```
 
 ## Contributing
 

@@ -75,6 +75,13 @@ module.exports = function(grunt) {
           atBegin: true
         }
       }
+    },
+    mkdir: {
+      temp: {
+        options: {
+          p: true
+        }
+      }
     }
   });
 
